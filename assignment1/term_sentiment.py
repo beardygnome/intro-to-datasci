@@ -51,7 +51,7 @@ def main():
     new_word_scores = process_new_words(new_words)
 
     for key in new_word_scores:
-        print key, (new_word_scores[key])
+        print key.encode("utf-8"), (new_word_scores[key])
 
 
 def process_new_words(new_words):
