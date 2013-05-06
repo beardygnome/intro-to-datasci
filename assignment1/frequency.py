@@ -42,7 +42,7 @@ def main():
         #else:
         #    break
 
-        print word, words[word]
+        print word.encode("utf-8"), words[word]
 
 
 def process_tweet(tweet):
