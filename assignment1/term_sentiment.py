@@ -43,26 +43,15 @@ def main():
     sentiments = process_sentiments(sent_file)
     new_words = {}
 
-    i = 0
     for line in tweet_file:
-#        if i < 20:
-#            i += 1
-#        else:
-#            break
 
         processed_tweet = process_tweet(line, sentiments)
         get_new_words(processed_tweet, sentiments, new_words)
 
-    #print "Total keys: " + str(len(new_words))
     new_word_scores = process_new_words(new_words)
 
     for key in new_word_scores:
-        if i < 20:
-            i += 1
-        else:
-            break
-
-        print key + " : " + str(new_word_scores[key])
+        print key, (new_word_scores[key])
 
 
 def process_new_words(new_words):
