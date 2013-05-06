@@ -16,21 +16,16 @@ def get_new_words(processed_tweet, scores, new_words):
     their total tweet score.
     """
 
-    tweet_text, tweet_score = processed_tweet
+    tweet_text, tweet_score, average_score = processed_tweet
     tweet_words = tweet_text.split()
-    tweet_wordcount = len(tweet_words)
-
 
     for word in tweet_words:
         if not word in scores:
-            new_score = tweet_score / tweet_wordcount
-
             if word in new_words:
                 new_words[word][0] += 1.0
-                new_words[word][1] += new_score
+                new_words[word][1] += average_score
             else:
-                new_words[word] = [1.0, new_score]
-
+                new_words[word] = [1.0, average_score]
 
 
 def main():
@@ -50,15 +45,38 @@ def main():
 
     i = 0
     for line in tweet_file:
+#        if i < 20:
+#            i += 1
+#        else:
+#            break
+
+        processed_tweet = process_tweet(line, sentiments)
+        get_new_words(processed_tweet, sentiments, new_words)
+
+    #print "Total keys: " + str(len(new_words))
+    new_word_scores = process_new_words(new_words)
+
+    for key in new_word_scores:
         if i < 20:
             i += 1
         else:
             break
 
-        get_new_words(process_tweet(line, sentiments), sentiments, new_words)
+        print key + " : " + str(new_word_scores[key])
+
+
+def process_new_words(new_words):
+    """(dict(str, list of float) -> dict(str, float)
+
+    Calculate the overall score for each new word
+    """
+
+    new_word_scores = {}
 
     for key in new_words:
-        print key + " : " + str(new_words[key])#[0], new_words[key][1]
+        new_word_scores[key] = new_words[key][1] / new_words[key][0]
+
+    return new_word_scores
 
 
 def process_sentiments(scores):
@@ -78,12 +96,15 @@ def process_sentiments(scores):
 
 
 def process_tweet(tweet, scores):
-    """(str, dict(str, float)) -> (str, float)
+    """(str, dict(str, float)) -> (str, float, int)
 
-    Return the overall score of each tweet.
+    Return the text overall score and average score of each tweet.
     """
 
+    tweet_text = ""
     sentiment = 0.0
+    words_used = 0
+    average_score = 0.0
 
     tweet = json.loads(tweet)
 
@@ -94,10 +115,12 @@ def process_tweet(tweet, scores):
         for word in tweet_text.split():
             if word in scores:
                 sentiment += scores[word]
+                words_used += 1
 
-        return (tweet_text, sentiment)
-    else:
-        return ("", sentiment)
+        if not words_used == 0:
+            average_score = sentiment / words_used
+
+    return (tweet_text, sentiment, average_score)
 
 
 if __name__ == '__main__':
