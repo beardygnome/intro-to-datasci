@@ -23,10 +23,14 @@ long_line_behaviour=1
 long_line_column=80
 
 [files]
-current_page=1
+current_page=0
 FILE_NAME_0=0;Python;0;16;0;1;0;%2Fhome%2Fphilip%2FDocuments%2FCoursera%2FIntroduction%20to%20Data%20Science%2Fdatasci_course_materials%2Fassignment1%2Fprint.py;0;4
-FILE_NAME_1=408;Python;0;16;0;1;0;%2Fhome%2Fphilip%2FDocuments%2FCoursera%2FIntroduction%20to%20Data%20Science%2Fdatasci_course_materials%2Fassignment1%2Ftwitterstream.py;0;4
-FILE_NAME_2=899;Python;0;16;0;1;0;%2Fhome%2Fphilip%2FDocuments%2FCoursera%2FIntroduction%20to%20Data%20Science%2Fdatasci_course_materials%2Fassignment1%2Ftweet_sentiment.py;0;4
+FILE_NAME_1=1420;Python;0;16;0;1;0;%2Fhome%2Fphilip%2FDocuments%2FCoursera%2FIntroduction%20to%20Data%20Science%2Fdatasci_course_materials%2Fassignment1%2Ftwitterstream.py;0;4
+FILE_NAME_2=937;Python;0;16;0;1;0;%2Fhome%2Fphilip%2FDocuments%2FCoursera%2FIntroduction%20to%20Data%20Science%2Fdatasci_course_materials%2Fassignment1%2Ftweet_sentiment.py;0;4
+FILE_NAME_3=2254;Python;0;16;0;1;0;%2Fhome%2Fphilip%2FDocuments%2FCoursera%2FIntroduction%20to%20Data%20Science%2Fdatasci_course_materials%2Fassignment1%2Fterm_sentiment.py;0;4
+FILE_NAME_4=931;Python;0;16;0;1;0;%2Fhome%2Fphilip%2FDocuments%2FCoursera%2FIntroduction%20to%20Data%20Science%2Fdatasci_course_materials%2Fassignment1%2Ffrequency.py;0;4
+FILE_NAME_5=610;Python;0;16;0;1;0;%2Fhome%2Fphilip%2FDocuments%2FCoursera%2FIntroduction%20to%20Data%20Science%2Fdatasci_course_materials%2Fassignment1%2Fhappiest_state.py;0;4
+FILE_NAME_6=189;Python;0;16;0;1;0;%2Fhome%2Fphilip%2FDocuments%2FCoursera%2FIntroduction%20to%20Data%20Science%2Fdatasci_course_materials%2Fassignment1%2Ftop_ten.py;0;4
 
 [VTE]
 last_dir=/home/philip
