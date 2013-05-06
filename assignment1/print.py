@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import urllib
 import json
+import sys
+import urllib
 
 search_url = "http://search.twitter.com/search.json?q="
 
@@ -14,12 +15,13 @@ def main():
     """
     err = False
 
-    keyword = "experian"
+    keyword = sys.argv[1] #"experian"
+    pages = int(sys.argv[2]) #10
 
     (twitter_search(keyword))
 
-    for i in range(1, 11):
-        print i
+    for i in range(1, pages + 1):
+        #print i
         data = twitter_search(keyword, i)
         process_results(data)
 
