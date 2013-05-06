@@ -7,7 +7,7 @@ import sys
 def main():
     """(NoneType) -> NoneType
 
-    Run the program
+    Run the program.
     """
     tweet_file = open(sys.argv[1])
     tweet_texts = []

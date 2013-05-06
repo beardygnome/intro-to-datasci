@@ -1,32 +1,22 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import json
 import sys
 
-def hw():
-    print 'Hello, world!'
-
-
-def lines(fp):
-    print str(len(fp.readlines()))
-
-
 def main():
-    """(noneTYpe) -> NoneType
+    """(NoneType) -> NoneType
 
     Run the program.
     """
 
     sent_file = open(sys.argv[1])
     tweet_file = open(sys.argv[2])
-    #hw()
-    #lines(sent_file)
-    #lines(tweet_file)
 
     sentiments = process_sentiments(sent_file)
 
     for line in tweet_file:
         score = process_tweet(line, sentiments)
-
-        print score
 
 
 def process_sentiments(scores):
