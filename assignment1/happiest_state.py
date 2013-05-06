@@ -17,7 +17,7 @@ def main():
 
     i = 0
     for line in tweet_file:
-        if i < 20:
+        if i < 500:
             i += 1
         else:
             break
@@ -44,24 +44,26 @@ def process_sentiments(scores):
 
 
 def process_tweet(tweet, scores):
-    """(File, dict(str, float)) -> (str, float
+    """(File, dict(str, float)) -> (str, float)
 
     Return the state and the overall score of each tweet.
     """
 
+    place = ""
     sentiment = 0.0
-
     tweet = json.loads(tweet)
 
-
     if not "delete" in tweet:
-        tweet_text = tweet["text"]
+        if not tweet["place"] == None:
+            place = tweet["place"]["code"]
+            tweet_text = tweet["text"]
 
-        for word in tweet_text.split():
-            if word in scores:
-                sentiment += scores[word]
+            for word in tweet_text.split():
+                if word in scores:
+                    sentiment += scores[word]
 
-    return sentiment
+
+    return place, sentiment
 
 
 if __name__ == '__main__':
