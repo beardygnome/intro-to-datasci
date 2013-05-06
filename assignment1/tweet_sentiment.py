@@ -52,9 +52,7 @@ def process_tweet(tweet, scores):
     """
 
     sentiment = 0.0
-
     tweet = json.loads(tweet)
-
 
     if not "delete" in tweet:
         tweet_text = tweet["text"]

@@ -45,7 +45,6 @@ def main():
         print word, words[word]
 
 
-
 def process_tweet(tweet):
     """(str) -> str
 

@@ -15,8 +15,16 @@ def main():
 
     sentiments = process_sentiments(sent_file)
 
+    i = 0
     for line in tweet_file:
+        if i < 20:
+            i += 1
+        else:
+            break
+
         score = process_tweet(line, sentiments)
+
+        print score
 
 
 def process_sentiments(scores):
@@ -36,9 +44,9 @@ def process_sentiments(scores):
 
 
 def process_tweet(tweet, scores):
-    """(File, dict(str, float)) -> float
+    """(File, dict(str, float)) -> (str, float
 
-    Return the overall score of each tweet.
+    Return the state and the overall score of each tweet.
     """
 
     sentiment = 0.0
