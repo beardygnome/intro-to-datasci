@@ -2,7 +2,7 @@ import MapReduce
 import sys
 
 """
-Social Network Friend Count Example in the Simple Python MapReduce Framework
+Social Network Asymmetric Friendships Example in the Simple Python MapReduce Framework
 """
 
 mr = MapReduce.MapReduce()
