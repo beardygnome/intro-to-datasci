@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from __future__ import absolute_import, division, print_function, unicode_literals
+
 import json
 import sys
 import urllib
@@ -40,7 +42,7 @@ def process_results(search_results):
     #for key in results[0]: print key
 
     for tweet in results:
-        print tweet["text"]
+        print(tweet["text"])
 
 
 

@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from __future__ import absolute_import, division, print_function, unicode_literals
+
 import json
 import sys
 
@@ -18,7 +20,7 @@ def main():
         if tweet_text:
             tweet_texts.append(tweet_text)
 
-    #print tweet_texts
+    #print(tweet_texts)
 
     words = {}
     tot_num_words = 0.0
@@ -42,7 +44,7 @@ def main():
         #else:
         #    break
 
-        print word.encode("utf-8"), words[word]
+        print(word.encode("utf-8"), words[word])
 
 
 def process_tweet(tweet):

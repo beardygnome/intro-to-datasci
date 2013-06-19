@@ -1,6 +1,8 @@
 #!/usr/bin/ev python
 # -*- coding: utf-8 -*-
 
+from __future__ import absolute_import, division, print_function, unicode_literals
+
 import json
 import sys
 
@@ -46,7 +48,7 @@ def main():
     hashtag_list.sort(reverse=True)
 
     for i in range(10):
-        print hashtag_list[i][1], hashtag_list[i][0]
+        print(hashtag_list[i][1], hashtag_list[i][0])
 
 
 if __name__ == "__main__":

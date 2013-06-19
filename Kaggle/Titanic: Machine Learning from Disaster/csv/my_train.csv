@@ -1,0 +1,46 @@
+Filter,,,,,,,
+,,,,,,,
+,,,,survived,,,
+sex,pclass,ticketgrp,Data,0,1,Total Result,
+female,1,20 - 30,Sum - survived,0,5,5,
+,,,Count - survived,1,5,6,0.8333333333
+,,30+,Sum - survived,0,86,86,
+,,,Count - survived,2,86,88,0.9772727273
+,2,10 - 20,Sum - survived,0,32,32,
+,,,Count - survived,3,32,35,0.9142857143
+,,20 - 30,Sum - survived,0,27,27,
+,,,Count - survived,3,27,30,0.9
+,,30+,Sum - survived,,11,11,
+,,,Count - survived,,11,11,1
+,3,10 - 20,Sum - survived,0,25,25,
+,,,Count - survived,18,25,43,0.5813953488
+,,20 - 30,Sum - survived,0,7,7,
+,,,Count - survived,14,7,21,0.3333333333
+,,30+,Sum - survived,0,2,2,
+,,,Count - survived,14,2,16,0.125
+,,under 10,Sum - survived,0,38,38,
+,,,Count - survived,26,38,64,0.59375
+male,1,20 - 30,Sum - survived,0,12,12,
+,,,Count - survived,18,12,30,0.4
+,,30+,Sum - survived,0,33,33,
+,,,Count - survived,53,33,86,0.3837209302
+,,under 10,Sum - survived,0,,0,
+,,,Count - survived,6,,6,0
+,2,10 - 20,Sum - survived,0,10,10,
+,,,Count - survived,53,10,63,0.1587301587
+,,20 - 30,Sum - survived,0,4,4,
+,,,Count - survived,21,4,25,0.16
+,,30+,Sum - survived,0,3,3,
+,,,Count - survived,11,3,14,0.2142857143
+,,under 10,Sum - survived,0,,0,
+,,,Count - survived,6,,6,0
+,3,10 - 20,Sum - survived,0,9,9,
+,,,Count - survived,29,9,38,0.2368421053
+,,20 - 30,Sum - survived,0,3,3,
+,,,Count - survived,21,3,24,0.125
+,,30+,Sum - survived,0,6,6,
+,,,Count - survived,19,6,25,0.24
+,,under 10,Sum - survived,0,29,29,
+,,,Count - survived,231,29,260,0.1115384615
+Total Sum - survived,,,,0,342,342,
+Total Count - survived,,,,549,342,891,

@@ -1,12 +1,13 @@
+from __future__ import absolute_import, division, print_function, unicode_literals
 import json
 import sys
 
 def hw():
-    print 'Hello, world!'
+    print('Hello, world!')
 
 
 def lines(fp):
-    print str(len(fp.readlines()))
+    print(str(len(fp.readlines())))
 
 
 def main():
@@ -26,7 +27,7 @@ def main():
     for line in tweet_file:
         score = process_tweet(line, sentiments)
 
-        print score
+        print(score)
 
 
 def process_sentiments(scores):

@@ -1,11 +1,13 @@
+from __future__ import absolute_import, division, print_function, unicode_literals
+
 import json
 import sys
 
 def hw():
-    print 'Hello, world!'
+    print('Hello, world!')
 
 def lines(fp):
-    print str(len(fp.readlines()))
+    print(str(len(fp.readlines())))
 
 
 def get_new_words(processed_tweet, scores, new_words):
@@ -51,7 +53,7 @@ def main():
     new_word_scores = process_new_words(new_words)
 
     for key in new_word_scores:
-        print key.encode("utf-8"), (new_word_scores[key])
+        print(key.encode("utf-8"), (new_word_scores[key]))
 
 
 def process_new_words(new_words):
